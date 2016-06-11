@@ -28,16 +28,16 @@ OPTIONS:
 
 使用场景举例：
 
-同学A 想把自己机器上的 app.py 分享给同学B，同学A操作如下：
+李雷想把自己机器上的 app.py 分享给韩梅梅，李雷操作如下：
 
 ```
-> gn -f app.py -m 'this is a test python file' < app.py
+$ gn -f app.py -m 'this is a test python file' < app.py
 https://gist.github.com/38821b0f84959c525379edb258f0243f
 38821b0f84959c525379edb258f0243f
 ```
 
-将获得的 gist id 或 url 发送给同学B，然后同学B操作如下：
+李雷将获得的 gist id 或 url 发送给韩梅梅，然后韩梅梅操作如下：
 
 ```
-> gn 38821b0f84959c525379edb258f0243fc > app.py
+$ gn 38821b0f84959c525379edb258f0243fc > app.py
 ```
