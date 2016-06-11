@@ -1,4 +1,4 @@
-# This is a simple note based on gist.
+# python-gist-note
 
 基于 gist 的简易 note 工具，可以很方便和你的小伙伴分享代码片段。
 
