@@ -1,6 +1,6 @@
 # python-gist-note
 
-灵感来自于 @教主的 42qucc： https://bitbucket.org/zuroc/42qu-notepad , http://p.pe.vc/:help
+灵感来自于 @教主的 42qucc： https://bitbucket.org/zuroc/42qu-notepad， http://p.pe.vc/:help
 基于 gist 的简易 note 工具，可以很方便和你的小伙伴分享代码片段。
 
 ### 安装
