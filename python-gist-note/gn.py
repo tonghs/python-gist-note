@@ -11,10 +11,10 @@ import json
 h = """
 USAGE：
     1. 获取 gist 内容（写入到 file.py）：
-    tnote :gist-id > file.py
+    gn gist-id > file.py
 
     2. 新建 gist （根据 file.py 文件的内容）：
-    tnote [-f filename [-m descript]] < file.py
+    gn [-f filename [-m descript]] < file.py
 
 OPTIONS:
     --help, -h: 显示本帮助
