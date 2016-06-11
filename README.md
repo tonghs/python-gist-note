@@ -1,6 +1,6 @@
 # python-gist-note
 
-灵感来自于 @教主的 42qucc： https://bitbucket.org/zuroc/42qu-notepad， http://p.pe.vc/:help。
+灵感来自于 @教主 的 42qucc： https://bitbucket.org/zuroc/42qu-notepad， http://p.pe.vc/:help。
 
 基于 gist 的代码分享工具，可以很方便和你的小伙伴在`命令行`分享代码片段。
 
