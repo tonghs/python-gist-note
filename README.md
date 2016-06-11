@@ -1,5 +1,6 @@
 # python-gist-note
 
+灵感来自于 @教主的 42qucc： https://bitbucket.org/zuroc/42qu-notepad , http://p.pe.vc/:help
 基于 gist 的简易 note 工具，可以很方便和你的小伙伴分享代码片段。
 
 ### 安装
@@ -41,3 +42,8 @@ https://gist.github.com/38821b0f84959c525379edb258f0243f
 ```
 $ gn 38821b0f84959c525379edb258f0243fc > app.py
 ```
+
+### 注意
+
+1. 因为是匿名，所以只能在线查看不能编辑，将来有可能增加用户
+2. 生成的 url 可读性比较差，考虑加入短域名
