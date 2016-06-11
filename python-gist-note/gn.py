@@ -9,19 +9,20 @@ import json
 
 
 h = """
+
 USAGE：
     1. 获取 gist 内容（写入到 file.py）：
     gn gist-id > file.py
 
     2. 新建 gist （根据 file.py 文件的内容）：
-    gn [-f filename [-m descript]] < file.py
+    gn [options] < file.py
 
 OPTIONS:
     --help, -h: 显示本帮助
 
-    -f: 新建 gist 时，新建的 gist 的文件名，默认为：gistfile1.txt
+    -f: 可选，新建 gist 时，新建的 gist 的文件名，默认为：gistfile1.txt
 
-    -m: 新建 gist 时，新建的 gist 描述，默认为空
+    -m: 可选，新建 gist 时，新建的 gist 描述，默认为空
 
 """
 
@@ -55,7 +56,12 @@ def get(url_or_id):
     url = '{host}gists/{id}'.format(host=API_HOST, id=url_or_id)
 
     r = requests.get(url)
-    print json.loads(r.text).get('files', dict()).values()[0].get('content', '')
+    files = json.loads(r.text).get('files', dict())
+    if files:
+        files[0].values()[0].get('content', '')
+    else:
+        print 'Error: Bad gist id or url'
+        help()
 
 
 def create(filename, desc, content):
@@ -78,13 +84,14 @@ def create(filename, desc, content):
 
 
 def main():
+    options = ['-f', '-m']
     argv = sys.argv
 
     filename = ''
     desc = ''
     removed_li = list()
     for i, arg in enumerate(argv):
-        if arg.startswith('-'):
+        if arg in options:
             val = argv[i + 1]
             if val.startswith('-'):
                 print '参数错误: {arg}'.format(arg=arg)
