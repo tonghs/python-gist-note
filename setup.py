@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='python-gist-note',
-    version='0.0.6',
+    version='0.0.7',
     keywords=('note', 'gist', 'gist-note', 'gn'),
     description='just a simple gist note',
     license='MIT License',
