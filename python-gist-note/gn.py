@@ -56,9 +56,10 @@ def get(url_or_id):
     url = '{host}gists/{id}'.format(host=API_HOST, id=url_or_id)
 
     r = requests.get(url)
+    print r.text
     files = json.loads(r.text).get('files', dict())
     if files:
-        files[0].values()[0].get('content', '')
+        files.values()[0].get('content', '')
     else:
         print 'Error: Bad gist id or url'
         help()
