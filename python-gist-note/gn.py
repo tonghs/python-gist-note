@@ -7,6 +7,10 @@ import sys
 
 import json
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 h = """
 
