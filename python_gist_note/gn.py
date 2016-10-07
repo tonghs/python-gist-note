@@ -12,6 +12,8 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
+version = '0.1.1'
+
 h = """
 
 USAGE：
@@ -115,6 +117,8 @@ def main():
     if len(argv) > 1:
         if argv[1] in ['--help', '-h']:
             help()
+        elif argv[1] in ['--version', '-v']:
+            print version
         else:
             get(argv[1])
     else:
