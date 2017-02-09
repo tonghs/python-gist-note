@@ -14,7 +14,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-version = '0.2.3'
+version = '0.2.4'
 
 h = """
 
