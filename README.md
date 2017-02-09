@@ -20,6 +20,9 @@ USAGE：
     2. 新建 gist （根据 file.py 文件的内容）：
     gn [options] < file.py
 
+    3. 完整参数：
+    gn -f gist-test.py -m 'this is a test file' -u abc@def.com -p pwd < test.py
+
 OPTIONS:
 
     --help, -h: 显示本帮助
@@ -27,6 +30,8 @@ OPTIONS:
     -f: 可选，新建 gist 时，新建的 gist 的文件名，默认为：gistfile1.txt
 
     -m: 可选，新建 gist 时，新建的 gist 描述，默认为空
+
+    -u, -p: 用户名和密码
 
 使用场景举例：
 
