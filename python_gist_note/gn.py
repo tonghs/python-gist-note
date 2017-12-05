@@ -14,7 +14,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-version = '1.2.4'
+version = '0.2.5'
 
 h = """
 
@@ -133,7 +133,6 @@ def parse_args(argv):
     desc = ''
     user = ''
     pwd = ''
-    input_text = False
 
     removed_li = list()
     for i, arg in enumerate(argv):
