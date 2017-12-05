@@ -14,7 +14,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-version = '0.2.4'
+version = '1.2.4'
 
 h = """
 
@@ -25,11 +25,16 @@ USAGE：
     2. 新建 gist （根据 file.py 文件的内容）：
     gn [options] < file.py
 
-    3. 完整参数：
+    3. 控制台输入笔记 Ctrl+D保存到gist
+    gn -w
+
+    4. 完整参数：
     gn -f gist-test.py -m 'this is a test file' -u abc@def.com -p pwd < test.py
 
 OPTIONS:
     --help, -h: 显示本帮助
+    
+    -w: 可选，接受屏幕输入，Ctrl+D后保存到 gist中
 
     -f: 可选，新建 gist 时，新建的 gist 的文件名，默认为：gistfile1.txt
 
@@ -128,6 +133,7 @@ def parse_args(argv):
     desc = ''
     user = ''
     pwd = ''
+    input_text = False
 
     removed_li = list()
     for i, arg in enumerate(argv):
@@ -137,8 +143,7 @@ def parse_args(argv):
                 print '参数错误: {arg}'.format(arg=arg)
                 help()
                 return
-
-            if arg == '-f':
+            elif arg == '-f':
                 filename = val
             elif arg == '-m':
                 desc = val
@@ -164,6 +169,12 @@ def main():
             help()
         elif argv[1] in ['--version', '-v']:
             print version
+        elif argv[1] in ['-w']:
+            print "Write Note , Ctrl+D to save:"
+            txt = sys.stdin.read()
+            print "creating gist note ..."
+            params.update(content = txt)
+            create(**params)
         else:
             get(argv[1])
     else:
